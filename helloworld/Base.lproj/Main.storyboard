@@ -16,13 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzB-ld-4aO">
-                                <rect key="frame" x="159" y="646" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzB-ld-4aO">
+                                <rect key="frame" x="159" y="663" width="75" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4qY-1C-csR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="zW3-cB-DeT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="toggleTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXC-Qn-OU2"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-qw-3ok">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-qw-3ok">
                                 <rect key="frame" x="176" y="406.66666666666669" width="41" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -33,9 +39,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wYJ-qw-3ok" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A8V-xI-9rh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gzB-ld-4aO" secondAttribute="bottom" constant="120" id="Ian-8j-Duq"/>
+                            <constraint firstItem="gzB-ld-4aO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dJ1-KT-qfA"/>
                             <constraint firstItem="wYJ-qw-3ok" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qTS-iM-zV6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldLabel" destination="wYJ-qw-3ok" id="tU0-Wb-Jyg"/>
+                        <outlet property="toggleTextButton" destination="gzB-ld-4aO" id="hwe-V3-oyS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
